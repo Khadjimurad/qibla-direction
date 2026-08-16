@@ -127,6 +127,9 @@ dmypy.json
 *.jpg
 *.jpeg
 
+# macOS
+.DS_Store
+
 # Virtual environment
 venv/
 env/

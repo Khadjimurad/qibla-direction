@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bearing"
+version = "1.1.0"
+description = "Расчёт направления на Каабу и визуализация на карте с ориентацией здания"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Khadjimurad"}]
+dependencies = [
+    "requests>=2.32.0",
+    "Pillow>=12.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+bearing = "bearing.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["bearing*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
